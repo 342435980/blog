@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>你若安好，我便晴天！</title>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		width: 100vw;
+		height: 100vh;
+		background:url('./images/snow.jpg') no-repeat center center; 
+		background-size:cover;
+		position: relative;
+		overflow: hidden;
+	}
+	.inner {
+		width: 180px;
+		position: fixed;
+		right: 50px;
+		bottom: 20px;
+		margin: 0 auto;
+	}
+	.txt {
+		color:aliceblue;
+	}
+	</style>
+</head>
+<body>
+	<div class="cry">
+		<div class="inner">
+				<div class="txt">对不起，我把你弄丢了！</div>
+				<div class="txt">你说你最喜欢北方的雪，很遗憾不能陪你去看了！</div>
+				<div class="txt" style="text-align: right">BY JUN 2019.3.11</div>
+		</div>
+	</div>
+	<script src="js/ThreeCanvas.js"></script>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/Snow.js"></script>
+	<script src="js/snowFall.js"></script>
+	<script>
+		$.snowFall({
+			//创建粒子数量，密度
+			particleNo: 500,
+			//粒子下拉速度
+			particleSpeed:30,
+			//粒子在垂直（Y轴）方向运动范围
+			particleY_Range:1300,
+			//粒子在垂直（X轴）方向运动范围
+			particleX_Range:1000,
+			//是否绑定鼠标事件
+		    bindMouse: false,
+		    //相机离Z轴原点距离
+		    zIndex:600,
+		  //摄像机视野角度
+		    angle:55,
+		    wind_weight: 2
+			});
+	</script>
+	<canvas>
+	</canvas>
+	<!-- 代码部分end -->
+</body>
+</html>
